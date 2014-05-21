@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var Display = require('../models/Display');
 require('coffee-script');
 
 
@@ -55,6 +56,12 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
+});
+
+app.get('/', function(req, res){
+  res.render('index', {
+    
+  });
 });
 
 
