@@ -1,6 +1,11 @@
 window.onload = function() {
 
   // Normalize the various vendor prefixed versions of getUserMedia.
+
+}
+
+function start()
+{
     navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
     if (navigator.getUserMedia) {
       // Request the camera.
@@ -27,9 +32,5 @@ window.onload = function() {
     } else {
       alert('Sorry, your browser does not support getUserMedia');
     }
-}
-
-function start()
-{
     document.getElementById("ca").style.display = "inline";
 }
